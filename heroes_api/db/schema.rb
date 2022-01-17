@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_16_141550) do
+ActiveRecord::Schema.define(version: 2022_01_16_185936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 2022_01_16_141550) do
     t.string "name"
     t.integer "user_id"
     t.string "recipient_email"
-    t.string "recipient_first_name"
-    t.string "recipient_last_name"
     t.string "badge_template_id"
-    t.date "issued_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "issued_at"
+    t.string "issued_to_first_name"
+    t.string "issued_to_last_name"
   end
 
   create_table "users", force: :cascade do |t|
