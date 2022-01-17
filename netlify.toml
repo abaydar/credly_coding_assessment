@@ -1,0 +1,4 @@
+[build]
+base = "/heroes_client"
+publish = "/build"
+command = "npm run build"
